@@ -12,3 +12,13 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+const server = require("./api/server");
+const cors = require("cors");
+const port = process.env.PORT;
+
+server.use(cors());
+
+server.listen(port, () => {
+  console.log(`listening on port ${port}`);
+});
